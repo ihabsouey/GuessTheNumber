@@ -50,7 +50,8 @@ function again(){
     finalNumber.innerHTML = "?";
     document.body.style.backgroundColor = "#222";
     cheatPlace.innerHTML= "Between 1 and 20";
-    cheatBtn.style.backgroundColor = "red";
-
+    cheatBtn.style.backgroundColor = "white";
+    cheated = false;
     cheatedOnce= false ;
+    console.log(cheated);
 }
