@@ -9,7 +9,8 @@ cheatBtn = document.getElementById("cheatBtn");
 randomNumber = Math.floor(Math.random() * 20) + 1;
 
 cheated = false ;
-cheatedOnce = false
+cheatedOnce = false ;
+
 function cheat(){
     if (cheated == false){
         cheatBtn.style.backgroundColor = "red";
@@ -34,7 +35,7 @@ function check() {
     }
     else  {
         
-        highOrLow.innerHTML = cheatedOnce ? "🎉 You guessed it cheater 😈!" :  "🎉 You guessed it!";
+        highOrLow.innerHTML = cheatedOnce ? "🎉You guessed it cheater 😈!" :  "🎉 You guessed it!";
         finalNumber.innerHTML = randomNumber;
         highScore.textContent = Number(score.textContent) > Number(highScore.textContent) ? score.textContent : highScore.textContent;
         document.body.style.backgroundColor = "green";
