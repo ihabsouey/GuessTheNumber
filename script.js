@@ -30,8 +30,14 @@ function check() {
     numberGuessValue =Number(numberGuess.value) ;
     
     if (numberGuessValue != randomNumber) {
-        score.textContent = Number(score.textContent) - 1;
-        highOrLow.innerHTML =  numberGuessValue > randomNumber ? "📉 Too high!" : "📈 Too low!";
+        score.textContent = Number(score.textContent) - 1 > 0 ? Number(score.textContent) - 1 : 0;
+        if ( numberGuessValue > randomNumber) {
+            
+        highOrLow.innerHTML =  numberGuessValue -1 > randomNumber ? "📉 Too high!" : "📉 a little bit high!";
+        }
+        else {
+            highOrLow.innerHTML = numberGuessValue +1 < randomNumber ? "📈 Too low!" : "📈 a little bit low!";
+        }
     }
     else  {
         
